@@ -110,19 +110,18 @@ language that matches best.
 ### Challenges
 
 This software does not work as well when the input text to analyze is short, or unclean. For example tweets.
-
+当输入文本过短或不明确时，不能正常识别。例如，tweets这个词；
 When a text is written in multiple languages, the default algorithm of this software is not appropriate.
 You can try to split the text (by sentence or paragraph) and detect the individual parts. Running the language guesser
 on the whole text will just tell you the language that is most dominant, in the best case.
-
+当输入文本包含多种语言时，默认算法有问题。此时，可以试着把文本（句子或段落）分开，并检测各个部分。即使在最好的情况下，对整段文本进行识别也只能得到占据主要部分的语言；
 This software cannot handle it well when the input text is in none of the expected (and supported) languages.
 For example if you only load the language profiles from English and German, but the text is written in French,
 the program may pick the more likely one, or say it doesn't know. (An improvement would be to clearly detect that
 it's unlikely one of the supported languages.)
-
+当输入文本不符合预期（和支持）的语言时，不能很好地处理。例如，如果只加载包括英语和德语的配置文件，但输入文本是用法语写的，那么输出要么是更可能的一个，要么是无法判断。
 If you are looking for a language detector / language guesser library in Java, this seems to be the best open source
 library you can get at this time. If it doesn't need to be Java, you may want to take a look at https://code.google.com/p/cld2/
-
 
 ## How to Use
 
